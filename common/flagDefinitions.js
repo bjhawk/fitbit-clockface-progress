@@ -127,9 +127,6 @@ const flagDefinitions = [
   {
     "name":"Intersex",
     "rightColors":[
-      "gold",
-      "gold",
-      "gold",
       "gold"
     ],
     "leftColors":[],
@@ -342,6 +339,20 @@ const flagDefinitions = [
     "leftColors":[],
     "iconOutline":"black",
     "iconName":"blm"
+  },
+  {
+    "name":"Straight Ally",
+    "rightColors":[
+      "black",
+      "white",
+      "black",
+      "white",
+      "black",
+      "white"
+    ],
+    "leftColors":[],
+    "iconOutline":"",
+    "iconName":"ally"
   }
 ];
 
