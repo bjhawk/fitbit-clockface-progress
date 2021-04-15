@@ -1,0 +1,15 @@
+permissions
+time with leading zeros
+date - leading zero?
+trans - DOW, Month, etc.
+12/24hr format
+miles/km/etc
+update date - when?
+isolate start/stop of sensors into singular handlers
+battery - how/when update
+battery - icon(s) or svg w/variable fill?
+"stat" types
+add icons to stats
+"today" stats - how/when to update
+settings
+initial settings

@@ -1,3 +1,20 @@
 <svg>
+  <!-- Helper classes from FitBit -->
+  <defs>
+    <link rel="import" href="/mnt/sysassets/system_widget.defs" />
+    <link rel="stylesheet" href="styles.css" />
+  </defs>
+
   <rect id="background" />
+  <image id="flag" href="flags/ProgressPride3.png"/>
+  <text id="date" class="p3 center-text">wed 99 november</text>
+  <line class="hr" x1="0%+24" x2="100%-24" y1="55" y2="55"/>
+  <image id="icon" href="icons/Paw.png"/>
+  <rect id="timeBG" />
+  <text id="time">24:59</text>
+  
+  <line class="hr" x1="0%+24" x2="100%-24" y1="266" y2="266"/>
+  <text id="hrm" class="p3">&lt;3 999</text>
+  <text id="stat" class="p3 center-text">[ft] 99,999</text>
+  <text id="battery" class="p3">[] 100%</text>
 </svg>

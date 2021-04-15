@@ -1,12 +1,70 @@
-.defaultText {
-  font-size: 32;
-  font-family: System-Regular;
-  font-weight: regular;
-  text-length: 32;
-}
-
 #background {
   width: 100%;
   height: 100%;
+  fill: black;
+}
+
+line.hr {
+  stroke-width: 1;
+  stroke-linecap: round;
   fill: white;
+}
+
+#flag {
+  x: 0;
+  y: 60; /* 55 + 5 */
+  height: 201; /* 211 - (5*2) */
+  width: 100%;
+}
+
+#icon {
+  x: 16;
+  y: 125;
+  height:70;
+  width:70;
+}
+
+#date {
+  fill: white;
+  x: 168;
+  y: 45;
+  text-transform: uppercase;
+}
+
+#timeBG {
+  x: 114;
+  y: 126;
+  height: 70;
+  width: 216;
+  fill: black;
+  opacity: 0.25;
+}
+
+#time {
+  fill:white; /* TODO: configurable */
+  font-weight: light;
+  font-size: 92;
+  x:100%-4;
+  y:192;
+  text-anchor: end;
+}
+
+#hrm {
+  fill: red;
+  x: 0%+36;
+  y: 301;
+}
+
+
+#stat {
+  fill: white;
+  x: 168;
+  y: 301;
+}
+
+#battery {
+  fill: green;
+  x: 100%-36;
+  y: 301;
+  text-anchor: end;
 }
