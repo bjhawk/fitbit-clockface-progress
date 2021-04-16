@@ -1,15 +1,21 @@
 permissions
-time with leading zeros
-date - leading zero?
-trans - DOW, Month, etc.
-12/24hr format
-miles/km/etc
-update date - when?
+
 isolate start/stop of sensors into singular handlers
-battery - how/when update
+
+add icons to stats instead of emoji (if you want to use transparency fill magic, 8-bit greyscale png)
+
 battery - icon(s) or svg w/variable fill?
-"stat" types
-add icons to stats
+battery - color change for status?
+
 "today" stats - how/when to update
+
 settings
 initial settings
+i18n for settings
+
+remake flags in the correct dims for file size reasons
+black on flags - should we make it "black" instead of *black*
+
+carefully choose colors for hrm/battery text to match icons
+
+maybe apply choosable time color to all "whites" (date, stats)

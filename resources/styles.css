@@ -49,22 +49,49 @@ line.hr {
   text-anchor: end;
 }
 
-#hrm {
+#hrmGroup {
   fill: red;
-  x: 0%+36;
-  y: 301;
 }
 
+#hrmIcon {
+  x: 0;
+  y: 2;
+  height: 18;
+  width: 18;
+}
+
+#hrm {
+  x: 22;
+  y: 18;
+}
+
+#statGroup {
+  fill: white;
+}
+
+#statIcon {
+  y: -16;
+  height: 18;
+  width: 18;
+}
 
 #stat {
-  fill: white;
-  x: 168;
-  y: 301;
+  x: 10;
+  y: 0;
+}
+
+#batteryGroup {
+  fill: green;
+}
+
+#batteryIcon {
+  x: 0;
+  y: 2;
+  height: 18;
+  width: 18;
 }
 
 #battery {
-  fill: green;
-  x: 100%-36;
-  y: 301;
-  text-anchor: end;
+  x: 22;
+  y: 18;
 }

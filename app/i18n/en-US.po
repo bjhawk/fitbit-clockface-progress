@@ -1,0 +1,83 @@
+msgid "month0"
+msgstr "January"
+
+msgid "month1"
+msgstr "February"
+
+msgid "month2"
+msgstr "March"
+
+msgid "month3"
+msgstr "April"
+
+msgid "month4"
+msgstr "May"
+
+msgid "month5"
+msgstr "June"
+
+msgid "month6"
+msgstr "July"
+
+msgid "month7"
+msgstr "August"
+
+msgid "month8"
+msgstr "September"
+
+msgid "month9"
+msgstr "October"
+
+msgid "month10"
+msgstr "November"
+
+msgid "month11"
+msgstr "December"
+
+msgid "day0"
+msgstr "Sunday"
+
+msgid "day1"
+msgstr "Monday"
+
+msgid "day2"
+msgstr "Tuesday"
+
+msgid "day3"
+msgstr "Wednesday"
+
+msgid "day4"
+msgstr "Thursday"
+
+msgid "day5"
+msgstr "Friday"
+
+msgid "day6"
+msgstr "Saturday"
+
+msgid "shortday0"
+msgstr "Sun"
+
+msgid "shortday1"
+msgstr "Mon"
+
+msgid "shortday2"
+msgstr "Tue"
+
+msgid "shortday3"
+msgstr "Wed"
+
+msgid "shortday4"
+msgstr "Thu"
+
+msgid "shortday5"
+msgstr "Fri"
+
+msgid "shortday6"
+msgstr "Sat"
+
+msgid "distance-us"
+msgstr "mi"
+
+msgid "distance-metric"
+msgstr "km"

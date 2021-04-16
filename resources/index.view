@@ -1,4 +1,4 @@
-<svg>
+<svg id="container" pointer-events="visible">
   <!-- Helper classes from FitBit -->
   <defs>
     <link rel="import" href="/mnt/sysassets/system_widget.defs" />
@@ -6,15 +6,39 @@
   </defs>
 
   <rect id="background" />
-  <image id="flag" href="flags/ProgressPride3.png"/>
-  <text id="date" class="p3 center-text">wed 99 november</text>
-  <line class="hr" x1="0%+24" x2="100%-24" y1="55" y2="55"/>
-  <image id="icon" href="icons/Paw.png"/>
+
+  <image id="flag" href="flags/ProgressPride3.png" />
+
+  <text id="date" class="p3 center-text" text-length="40" />
+
+  <line class="hr" x1="0%+24" x2="100%-24" y1="55" y2="55" />
+
+  <image id="icon" href="icons/Paw.png" />
+
   <rect id="timeBG" />
-  <text id="time">24:59</text>
-  
+
+  <text id="time" text-length="24" />
+
   <line class="hr" x1="0%+24" x2="100%-24" y1="266" y2="266"/>
-  <text id="hrm" class="p3">&lt;3 999</text>
-  <text id="stat" class="p3 center-text">[ft] 99,999</text>
-  <text id="battery" class="p3">[] 100%</text>
+  
+  <g transform="translate(0,278)">
+    <g id="hrmGroup" transform="translate(30,0)">
+      <rect id="hrmIcon">
+        <animate attributeName="opacity" begin="load" from="1" to="0" dur="1" repeatCount="indefinite" />
+      </rect>
+      <text id="hrm" class="p3" text-length="12"/>
+    </g>
+
+    <g id="statGroup" class="center-text" transform="translate(168,18)">
+      <animate attributeName="opacity" begin="click" from="1" to="0" dur="0.2" />
+      <animate attributeName="opacity" begin="click+0.2" from="0" to="1" dur="0.2" />
+      <rect id="statIcon" />
+      <text id="stat" class="p3" text-length="16" />
+    </g>
+
+    <g id="batteryGroup" transform="translate(258,0)">
+      <rect id="batteryIcon" />
+      <text id="battery" class="p3" text-length="16" />
+    </g>
+  </g>
 </svg>

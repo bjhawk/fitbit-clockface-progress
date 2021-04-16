@@ -1,175 +1,101 @@
-// TODO: PERMISSIONS
 import { battery } from 'power';
-import { BodyPresenceSensor } from 'body-presence';
 import clock from 'clock';
 import { display } from 'display';
 import document from 'document';
 import { HeartRateSensor } from 'heart-rate';
 import { me } from 'appbit';
 import { today } from 'user-activity';
+import stats from './stat-handlers';
+import { timeFormat, dateFormat } from './formatters';
+import { preferences, locale, units } from 'user-settings';
+import { UserPreferences } from './types/user-preferences';
 
-const clockElement = document.getElementById('time');
-clock.granularity = 'seconds';
-clock.ontick = function (clockTickEvent) {
-  
-  // todo: respect 12/24 hr in format
-  const hours = clockTickEvent.date.getHours();
-  const minutes = clockTickEvent.date.getMinutes();
-  // const seconds = clockTickEvent.date.getSeconds();
-
-  // console.log(JSON.stringify(clockTickEvent.date.getDay()));
-  // TODO: date... oi.
-
-  // clockElement.text = `${hours}:${minutes}:${seconds}`;
-  // clockElement.text = `${hours}:${minutes}`;
+// gather user prefs into a single object to throw around
+const userPreferences: UserPreferences = {
+  preferences,
+  locale,
+  units
 }
 
-// stat element
+// Elements
+const dateElement = document.getElementById('date');
+const clockElement = document.getElementById('time');
+const hrmElement = document.getElementById('hrm');
+const batteryElement = document.getElementById('battery');
 const statElement = document.getElementById('stat');
+const statIconElement = document.getElementById('statIcon');
+const svg = document.getElementById('container');
 
 // HRM
-const hrElement = document.getElementById('hr');
 let hrm = null;
 if (HeartRateSensor && !hrm) {
   hrm = new HeartRateSensor();
 
   hrm.onreading = function () {
-    hrElement.text = `${hrm.heartRate}`;
+    hrmElement.text = `${hrm.heartRate || '--'}`;
   };
 
   hrm.start();
 }
 
-// on-wrist and screen-on detection
-let body = null
-// if (hrm && BodyPresenceSensor && !body) {
-//   body = new BodyPresenceSensor();
-//   body.onreading = () => {
-// 		if (!body.present && hrm.activated) {
-// 			hrm.stop();
-// 		} else if (body.present && !hrm.activated) {
-// 			hrm.start();
-// 		}
+// clock.granularity = 'seconds';
+clock.ontick = function (clockTickEvent) {
+  // todo: can we redraw this when the preferences changes, since tick will be min not sec
+  clockElement.text = timeFormat(clockTickEvent.date, preferences.clockDisplay === '24h');
 
-//     debug();
-// 	};
-// 	body.start();
-// }
-// todo: screen off = hrm off AND body off
+  dateElement.text = dateFormat(clockTickEvent.date);
+}
+
+// TODO: this is throwing an error 61:7 - cannot read property activated of null - perms?
 display.addEventListener('change', () => {
+  // on display change = on: draw stats, set timeout for stats draw every few seconds (6?)
+  // on display change = off: clear timeout for stats draw, 
   if (display.on) {
     handleDisplayOn();
   } else {
     handleDisplayOff();
   }
-
-  debug();
 });
 
 function handleDisplayOn() {
+  // TODO: turn on hr sensor, draw stat, set timeout to draw stats
   if (hrm && !hrm.activated) {
     hrm.start();
-  }
-
-  if (body && !body.activated) {
-    body.start();
-  }
+  }  
 }
 
 function handleDisplayOff() {
   if (hrm && hrm.activated) {
     hrm.stop();
   }
-
-  if (body && body.activated) {
-    body.stop();
-  }
 }
 
 // Battery display
-const batteryElement = document.getElementById('battery');
-batteryElement.text = Math.floor(battery.chargeLevel) + '%';
-
-const stats = [
-  {
-    name: 'steps',
-    init() {
-      statElement.text = `${today.adjusted.steps || 0}`;
-    },
-    halt() {},
-  },
-  {
-    name: 'calories',
-    init() {
-      statElement.text = `${today.adjusted.calories || 0}`;
-    },
-    halt() {},
-  },
-  {
-    name: 'distance',
-    init() {
-      // todo: convert units
-      statElement.text = `${today.adjusted.distance || 0}`;
-    },
-    halt() {},
-  },
-  {
-    name: 'activeMinutes',
-    init() {
-      // todo: convert units
-      statElement.text = `${today.adjusted.activeZoneMinutes.total || 0}`;
-    },
-    halt() {},
-  },
-  {
-    name: 'elevationGain',
-    init() {
-      // todo: convert units
-      statElement.text = `${today.adjusted.elevationGain || 0}`;
-    },
-    halt() {},
-  },
-];
+batteryElement.text = `${battery.chargeLevel.toFixed(0)}`;
+battery.onchange = function() {
+  batteryElement.text = `${battery.chargeLevel.toFixed(0)}`;
+}
 
 let state = 0;
-stats[state].init();
+draw();
 
-// stat click handling
-statElement.onclick = () => {
+function draw() {
+  // draw stat
+  stats[state].init(statElement, today, userPreferences);
+  
+  // set new icon
+  // TODO
+
+  // Shift icon according to length of data in stat element
+  // @ts-ignore : Element.x is valid for SVG elements
+  statIconElement.x = (statElement.text.length * -4.5) + -18;
+}
+
+// Click handling
+svg.onclick = () => {
   setTimeout(() => {
-    // halt current state
-    stats[state].halt();
-    
     // increment states
     state = (state + 1) % stats.length;
-
-    // init next state
-    stats[state].init();
-  }, 300)
+    draw();
+  }, 200)
 };
-
-// TODO: REMOVE
-function debug() {
-  const debugElement = document.getElementById('debug');
-  let debugStatement = '';
-
-  if (hrm.activated) {
-    debugStatement += 'H';
-  } else {
-    debugStatement += '_';
-  }
-
-  if (body.activated) {
-    debugStatement += 'B';
-  } else {
-    debugStatement += '_';
-  }
-
-  if (display.on) {
-    debugStatement += 'D';
-  } else {
-    debugStatement += '_';
-  }
-  console.log(`Debug: ${debugStatement}`);
-  debugElement.text = debugStatement;
-}
