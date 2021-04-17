@@ -39,6 +39,8 @@ if (HeartRateSensor && !hrm) {
 }
 
 // clock.granularity = 'seconds';
+// draw once on load
+clockElement.text = timeFormat(new Date, preferences.clockDisplay === '24h');
 clock.ontick = function (clockTickEvent) {
   // todo: can we redraw this when the preferences changes, since tick will be min not sec
   clockElement.text = timeFormat(clockTickEvent.date, preferences.clockDisplay === '24h');
@@ -58,7 +60,7 @@ display.addEventListener('change', () => {
 });
 
 function handleDisplayOn() {
-  // TODO: turn on hr sensor, draw stat, set timeout to draw stats
+  // TODO: turn on hr sensor, draw time?, draw battery?, draw stat,  set timeout to draw stats
   if (hrm && !hrm.activated) {
     hrm.start();
   }  

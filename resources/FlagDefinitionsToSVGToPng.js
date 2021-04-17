@@ -232,6 +232,17 @@ const flagDefinitions = [
       "blue",
       "purple"
     ]
+  },
+  {
+    "name": "Ally",
+    "colors": [
+      "black",
+      "white",
+      "black",
+      "white",
+      "black",
+      "white",
+    ]
   }
 ];
 
@@ -239,6 +250,7 @@ const flagDefinitions = [
 const customColors = {
   'carnation': '#F778A1',
   'lavender': '#A74AC7',
+  'black': '#1C1C1C',
 };
 
 const flagHeight = 201;
