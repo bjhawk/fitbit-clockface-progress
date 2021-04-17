@@ -7,7 +7,7 @@
 
   <rect id="background" />
 
-  <image id="flag" href="flags/ProgressPride3.png" />
+  <image id="flag" href="flags/ProgressPride.png" />
 
   <text id="date" class="p3 center-text" text-length="40" />
 

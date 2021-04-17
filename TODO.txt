@@ -19,3 +19,5 @@ black on flags - should we make it "black" instead of *black*
 carefully choose colors for hrm/battery text to match icons
 
 maybe apply choosable time color to all "whites" (date, stats)
+
+make note somewhere about how to generate flags? `node .\FlagDefinitionsToSVGToPng.js` 
