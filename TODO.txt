@@ -2,13 +2,9 @@ permissions
 
 isolate start/stop of sensors into singular handlers
 
-add icons to stats instead of emoji (transparency fill magic requires 8-bit greyscale pngs)
-
-remake pride icons in right size
-remake pride icons with correct "black" #1c1c1c
 blm fist icon
 
-battery - color change for status?
+battery - color css class on update
 
 "today" stats - how/when to update
 
@@ -16,6 +12,6 @@ settings
 initial settings
 i18n for settings
 
-maybe apply choosable time color to all "whites" (date, stats)
-
 make note somewhere about how to generate flags? `node .\resources\FlagDefinitionsToSVGToPng.js` 
+
+attributions

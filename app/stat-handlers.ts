@@ -6,7 +6,7 @@ import { numberFormat, distanceFormat } from './formatters';
 
 const stepsHandler: StatHandler = {
   name: 'steps',
-  icon: 'steps',
+  icon: 'Steps',
   init: (statElement: Element, today: Today, userPreferences: UserPreferences) => {
     statElement.text = numberFormat(today.adjusted.steps || 0, userPreferences.locale.language);
   },
@@ -14,7 +14,7 @@ const stepsHandler: StatHandler = {
 
 const caloriesHandler: StatHandler = {
   name: 'calories',
-  icon: 'calories',
+  icon: 'Calories',
   init: (statElement: Element, today: Today, userPreferences: UserPreferences) => {
     statElement.text = numberFormat(today.adjusted.calories || 0, userPreferences.locale.language);
   },
@@ -22,7 +22,7 @@ const caloriesHandler: StatHandler = {
 
 const distanceHandler: StatHandler = {
   name: 'distance',
-  icon: 'distance',
+  icon: 'Distance',
   init: (statElement: Element, today: Today, userPreferences: UserPreferences) => {
     statElement.text = distanceFormat(
       today.adjusted.distance || 0,
@@ -34,7 +34,7 @@ const distanceHandler: StatHandler = {
 
 const activeMinutesHandler: StatHandler = {
   name: 'activeMinutes',
-  icon: 'activeMinutes',
+  icon: 'ActiveMinutes',
   init: (statElement: Element, today: Today, userPreferences: UserPreferences) => {
     statElement.text = numberFormat(today.adjusted.activeZoneMinutes.total || 0, userPreferences.locale.language);
     
@@ -43,7 +43,7 @@ const activeMinutesHandler: StatHandler = {
 
 const elevationHandler: StatHandler = {
   name: 'elevationGain',
-  icon: 'elevationGain',
+  icon: 'ElevationGain',
   init: (statElement: Element, today: Today, userPreferences: UserPreferences) => {
     statElement.text = `+${numberFormat(today.adjusted.elevationGain || 0, userPreferences.locale.language)}`;
   },

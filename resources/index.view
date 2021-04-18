@@ -32,7 +32,7 @@
     <g id="statGroup" class="center-text" transform="translate(168,18)">
       <animate attributeName="opacity" begin="click" from="1" to="0" dur="0.2" />
       <animate attributeName="opacity" begin="click+0.2" from="0" to="1" dur="0.2" />
-      <rect id="statIcon" />
+      <image id="statIcon" />
       <text id="stat" class="p3" text-length="16" />
     </g>
 
