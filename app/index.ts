@@ -22,6 +22,7 @@ const dateElement = document.getElementById('date');
 const clockElement = document.getElementById('time');
 const hrmElement = document.getElementById('hrm');
 const batteryElement = document.getElementById('battery');
+const batteryGroup = document.getElementById('batteryGroup');
 const statElement = document.getElementById('stat');
 const statIconElement = document.getElementById('statIcon');
 const svg = document.getElementById('container');
@@ -76,6 +77,8 @@ function handleDisplayOff() {
 batteryElement.text = `${battery.chargeLevel.toFixed(0)}`;
 battery.onchange = function() {
   batteryElement.text = `${battery.chargeLevel.toFixed(0)}`;
+  // TODO: update given data above
+  batteryGroup.class = '';
 }
 
 let state = 0;
@@ -86,10 +89,11 @@ function draw() {
   stats[state].init(statElement, today, userPreferences);
   
   // set new icon
-  // TODO
+  // @ts-ignore : Element.href is valid for SVG image elements
+  statIconElement.href = `icons/${stats[state].icon}.png`;
 
   // Shift icon according to length of data in stat element
-  // @ts-ignore : Element.x is valid for SVG elements
+  // @ts-ignore : Element.x is valid for SVG rect elements
   statIconElement.x = (statElement.text.length * -4.5) + -18;
 }
 

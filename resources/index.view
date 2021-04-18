@@ -23,7 +23,7 @@
   
   <g transform="translate(0,278)">
     <g id="hrmGroup" transform="translate(30,0)">
-      <image id="hrmIcon" href="icons/Heart.png">
+      <image id="hrmIcon" href="icons/HRM.png">
         <animate attributeName="opacity" begin="load" from="1" to="0.4" dur="1.1" easing="ease-out-in" repeatCount="indefinite" />
       </image>
       <text id="hrm" class="p3" text-length="12"/>
@@ -36,8 +36,8 @@
       <text id="stat" class="p3" text-length="16" />
     </g>
 
-    <g id="batteryGroup" transform="translate(258,0)">
-      <rect id="batteryIcon" />
+    <g id="batteryGroup" class="" transform="translate(258,0)">
+      <image id="batteryIcon" />
       <text id="battery" class="p3" text-length="16" />
     </g>
   </g>
