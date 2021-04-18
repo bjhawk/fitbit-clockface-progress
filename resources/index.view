@@ -23,9 +23,9 @@
   
   <g transform="translate(0,278)">
     <g id="hrmGroup" transform="translate(30,0)">
-      <rect id="hrmIcon">
-        <animate attributeName="opacity" begin="load" from="1" to="0" dur="1" repeatCount="indefinite" />
-      </rect>
+      <image id="hrmIcon" href="icons/Heart.png">
+        <animate attributeName="opacity" begin="load" from="1" to="0.4" dur="1.1" easing="ease-out-in" repeatCount="indefinite" />
+      </image>
       <text id="hrm" class="p3" text-length="12"/>
     </g>
 
