@@ -7,13 +7,13 @@
 
   <rect id="background" />
 
-  <image id="flag" href="flags/ProgressPride.png" />
+  <image id="flag" href="" />
 
-  <text id="date" class="p3 center-text" text-length="40" />
+  <text id="date" class="p2 center-text" text-length="40" />
 
   <line class="hr" x1="0%+24" x2="100%-24" y1="55" y2="55" />
 
-  <image id="icon" href="icons/Paw.png" />
+  <image id="icon" href="" />
 
   <rect id="timeBG" />
 
@@ -26,19 +26,19 @@
       <image id="hrmIcon" href="icons/HRM.png">
         <animate attributeName="opacity" begin="load" from="1" to="0.4" dur="1.1" easing="ease-out-in" repeatCount="indefinite" />
       </image>
-      <text id="hrm" class="p3" text-length="12"/>
+      <text id="hrm" class="p2" text-length="12"/>
     </g>
 
     <g id="statGroup" class="center-text" transform="translate(168,18)">
       <animate attributeName="opacity" begin="click" from="1" to="0" dur="0.2" />
       <animate attributeName="opacity" begin="click+0.2" from="0" to="1" dur="0.2" />
       <image id="statIcon" />
-      <text id="stat" class="p3" text-length="16" />
+      <text id="stat" class="p2" text-length="16" />
     </g>
 
     <g id="batteryGroup" class="" transform="translate(258,0)">
       <image id="batteryIcon" />
-      <text id="battery" class="p3" text-length="16" />
+      <text id="battery" class="p2" text-length="16" />
     </g>
   </g>
 </svg>

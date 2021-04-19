@@ -302,8 +302,8 @@ function drawFlag(flagDefinition) {
   if (flagName === 'Intersex') {
     console.log('Adding circle to intersex flag');
     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    circle.setAttribute('cx', 47);
-    circle.setAttribute('cy', 160-67.5);
+    circle.setAttribute('cx', 51);
+    circle.setAttribute('cy', 100);
     circle.setAttribute('r', 40);
     circle.setAttribute('fill', 'purple');
 

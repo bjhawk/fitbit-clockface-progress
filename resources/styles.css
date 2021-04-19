@@ -37,11 +37,9 @@ line.hr {
   height: 70;
   width: 216;
   fill: black;
-  opacity: 0.25;
 }
 
 #time {
-  fill:white; /* TODO: configurable */
   font-weight: light;
   font-size: 92;
   x:100%-4;
@@ -120,3 +118,47 @@ line.hr {
   x: 18;
   y: 19;
 }
+
+/* Color Classes */
+.bisque { fill: bisque; }
+.blue { fill: blue; }
+.chocolate { fill: chocolate; }
+.darkblue { fill: darkblue; }
+.darkgray { fill: darkgray; }
+.darkmagenta { fill: darkmagenta; }
+.darkorange { fill: darkorange; }
+.darkviolet { fill: darkviolet; }
+.deepskyblue { fill: deepskyblue; }
+.lightskyblue { fill: lightskyblue; }
+.dodgerblue { fill: dodgerblue; }
+.forestgreen { fill: forestgreen; }
+.gold { fill: gold; }
+.green { fill: green; }
+.greenyellow { fill: greenyellow; }
+.hotpink { fill: hotpink; }
+.indianred { fill: indianred; }
+.indigo { fill: indigo; }
+.lightgray { fill: lightgray; }
+.lightpink { fill: lightpink; }
+.limegreen { fill: limegreen; }
+.magenta { fill: magenta; }
+.maroon { fill: maroon; }
+.mediumblue { fill: mediumblue; }
+.mediumorchid { fill: mediumorchid; }
+.mediumturquoise { fill: mediumturquoise; }
+.mediumvioletred { fill: mediumvioletred; }
+.orange { fill: orange; }
+.orangered { fill: orangered; }
+.orchid { fill: orchid; }
+.plum { fill: plum; }
+.purple { fill: purple; }
+.red { fill: red; }
+.saddlebrown { fill: saddlebrown; }
+.violet { fill: violet; }
+.white { fill: white; }
+.yellow { fill: yellow; }
+
+/* Custom Colors */
+.carnation { fill: #F778A1; }
+.lavender { fill: #A74AC7; }
+.black { fill: #1C1C1C; }

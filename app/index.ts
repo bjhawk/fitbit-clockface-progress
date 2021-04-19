@@ -3,23 +3,29 @@ import clock from 'clock';
 import { display } from 'display';
 import document from 'document';
 import { HeartRateSensor } from 'heart-rate';
-import { me } from 'appbit';
+import { me as appbit } from 'appbit';
 import { today } from 'user-activity';
 import stats from './stat-handlers';
 import { timeFormat, dateFormat } from './formatters';
 import { preferences, locale, units } from 'user-settings';
 import { UserPreferences } from './types/user-preferences';
+import * as appSettings from 'simple-fitbit-settings/app';
+import { Settings } from '../companion/settings';
 
 // gather user prefs into a single object to throw around
 const userPreferences: UserPreferences = {
   preferences,
   locale,
-  units
+  units,
+  permissions: appbit.permissions,
 }
 
 // Elements
+const flagElement = document.getElementById('flag');
+const iconElement = document.getElementById('icon');
 const dateElement = document.getElementById('date');
 const clockElement = document.getElementById('time');
+const clockBGElement = document.getElementById('timeBG');
 const hrmElement = document.getElementById('hrm');
 const batteryElement = document.getElementById('battery');
 const batteryGroup = document.getElementById('batteryGroup');
@@ -27,9 +33,48 @@ const statElement = document.getElementById('stat');
 const statIconElement = document.getElementById('statIcon');
 const svg = document.getElementById('container');
 
+// Handle settings
+// get an instance of Settings
+const settings = new Settings();
+appSettings.initialize(
+  settings,
+  (newSettings: Settings) => {
+    if (newSettings.flag !== undefined) {
+      // @ts-ignore: element.href is valid for svg image elements
+      flagElement.href = `flags/${newSettings.flag.values[0].value}.png`;
+    }
+
+    if (newSettings.icon !== undefined) {
+      if (newSettings.icon.values[0].value === '') {
+        // @ts-ignore: element.href is valid for svg image elements
+        iconElement.href = '';
+      } else {
+        // @ts-ignore: element.href is valid for svg image elements
+        iconElement.href = `icons/${newSettings.icon.values[0].value}.png`;
+      }
+    }
+
+    if (newSettings.timeBGTransparency !== undefined) {
+      // @ts-ignore: element.style is valid for html and svg elements
+      clockBGElement.style.opacity = newSettings.timeBGTransparency / 100
+    }
+
+    
+    if (newSettings.timeBGTransparency !== undefined) {
+      // @ts-ignore: element.style is valid for html and svg elements
+      clockBGElement.style.opacity = newSettings.timeBGTransparency / 100
+    }
+
+    if (newSettings.timeColor !== undefined) {
+      // @ts-ignore: element.class is valid for html and svg elements
+      clockElement.class = newSettings.timeColor;
+    }
+  }
+)
+
 // HRM
 let hrm = null;
-if (HeartRateSensor && !hrm) {
+if (appbit.permissions.granted('access_heart_rate') && HeartRateSensor && !hrm) {
   hrm = new HeartRateSensor();
 
   hrm.onreading = function () {
@@ -39,69 +84,109 @@ if (HeartRateSensor && !hrm) {
   hrm.start();
 }
 
-// clock.granularity = 'seconds';
-// draw once on load
-clockElement.text = timeFormat(new Date, preferences.clockDisplay === '24h');
-clock.ontick = function (clockTickEvent) {
-  // todo: can we redraw this when the preferences changes, since tick will be min not sec
-  clockElement.text = timeFormat(clockTickEvent.date, preferences.clockDisplay === '24h');
+// Handle clock tick
+function tick(date: Date) {
+  clockElement.text = timeFormat(date, preferences.clockDisplay === '24h');
 
-  dateElement.text = dateFormat(clockTickEvent.date);
+  dateElement.text = dateFormat(date);
 }
 
+// Draw once on load
+tick(new Date());
+
+// Tick once per minute
+clock.granularity = 'minutes';
+
+// Set function as handler
+clock.ontick = function(clockTickEvent) {
+  tick(clockTickEvent.date);
+};
+
+let statTimeout = setInterval(draw, 3000);
 // TODO: this is throwing an error 61:7 - cannot read property activated of null - perms?
 display.addEventListener('change', () => {
-  // on display change = on: draw stats, set timeout for stats draw every few seconds (6?)
-  // on display change = off: clear timeout for stats draw, 
   if (display.on) {
-    handleDisplayOn();
+    // on display change = on: draw stats, set timeout for stats draw every few seconds (6?)
+    toggleSensors(true);
+    statTimeout = setInterval(draw, 3000);
   } else {
-    handleDisplayOff();
+    toggleSensors(false);
+    clearInterval(statTimeout);
+    statTimeout = null;
   }
 });
 
-function handleDisplayOn() {
-  // TODO: turn on hr sensor, draw time?, draw battery?, draw stat,  set timeout to draw stats
-  if (hrm && !hrm.activated) {
+function toggleSensors(toggleOn: boolean = true) {
+  if (toggleOn && hrm && !hrm.activated) {
     hrm.start();
-  }  
-}
-
-function handleDisplayOff() {
-  if (hrm && hrm.activated) {
+  } else if (!toggleOn && hrm && hrm.activated) {
     hrm.stop();
   }
 }
 
+const batteryClasses = [
+  '', // 85+
+  'mid', // 50-85,
+  'low', // 25-50,
+  'critical', // 0-25
+];
+
 // Battery display
-batteryElement.text = `${battery.chargeLevel.toFixed(0)}`;
-battery.onchange = function() {
+function drawBattery() {
   batteryElement.text = `${battery.chargeLevel.toFixed(0)}`;
-  // TODO: update given data above
-  batteryGroup.class = '';
+
+  // Get classes for battery indicators
+  const batteryClasses = [];
+  
+  // indicate charging
+  if (battery.charging) {
+    batteryClasses.push('charging'); 
+  }
+
+  // Changes color based on chargeLevel
+  if (battery.chargeLevel >= 50 && battery.chargeLevel < 85) {
+    batteryClasses.push('mid');
+  } else if (battery.chargeLevel >= 25 && battery.chargeLevel < 50) {
+    batteryClasses.push('low');
+  } else if (battery.chargeLevel < 25) {
+    batteryClasses.push('critical');
+  }
+  batteryGroup.class = batteryClasses.join(' ');
 }
 
-let state = 0;
-draw();
+// draw on init
+drawBattery();
 
-function draw() {
+// set function handler
+battery.onchange = drawBattery;
+
+// track what statIndex we are showing
+let statIndex = 0;
+
+// initialize drawing
+draw(true);
+
+function draw(newstatIndex: boolean = false) {
   // draw stat
-  stats[state].init(statElement, today, userPreferences);
+  stats[statIndex].init(statElement, today, userPreferences);
   
-  // set new icon
-  // @ts-ignore : Element.href is valid for SVG image elements
-  statIconElement.href = `icons/${stats[state].icon}.png`;
+  if (newstatIndex) {
+    // set new icon
+    // @ts-ignore : Element.href is valid for SVG image elements
+    statIconElement.href = `icons/${stats[statIndex].icon}.png`;
+  }
 
   // Shift icon according to length of data in stat element
   // @ts-ignore : Element.x is valid for SVG rect elements
-  statIconElement.x = (statElement.text.length * -4.5) + -18;
+  statIconElement.x = (statElement.text.length * -5.5) + -18;
 }
 
 // Click handling
 svg.onclick = () => {
   setTimeout(() => {
-    // increment states
-    state = (state + 1) % stats.length;
-    draw();
+    // increment statIndex, then redraw
+    statIndex = (statIndex + 1) % stats.length;
+
+    draw(true);
   }, 200)
 };
