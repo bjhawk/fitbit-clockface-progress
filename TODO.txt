@@ -1,3 +1,5 @@
+debounce transparency slider :(
+
 make note somewhere about how to generate flags? `node .\resources\FlagDefinitionsToSVGToPng.js` 
 
 attributions

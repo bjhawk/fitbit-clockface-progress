@@ -62,7 +62,7 @@ appSettings.initialize(
     
     if (newSettings.timeBGTransparency !== undefined) {
       // @ts-ignore: element.style is valid for html and svg elements
-      clockBGElement.style.opacity = newSettings.timeBGTransparency / 100
+      clockBGElement.style.opacity = newSettings.timeBGTransparency / 100;
     }
 
     if (newSettings.timeColor !== undefined) {
