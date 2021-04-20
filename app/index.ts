@@ -94,6 +94,15 @@ function tick(date: Date) {
   clockElement.text = timeFormat(date, preferences.clockDisplay === '24h');
 
   dateElement.text = dateFormat(date);
+
+  // resize time background to match new time
+  // @ts-ignore: element.getBBox is valid for svg elements
+  const boundingBox = clockElement.getBBox();
+
+  // @ts-ignore: element.x is valid for svg elements
+  clockBGElement.x = boundingBox.left - 2;
+  // @ts-ignore: element.width is valid for svg rect elements
+  clockBGElement.width = boundingBox.width + 4;
 }
 
 // Draw once on load

@@ -1,6 +1,6 @@
 {
   "name": "fitbit-clockface-progress",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
@@ -15,7 +15,7 @@
   "fitbit": {
     "appUUID": "2d371384-a08e-4181-994c-f7522f848807",
     "appType": "clockface",
-    "appDisplayName": "Progress",
+    "appDisplayName": "Progress Pride",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [

@@ -32,18 +32,17 @@ line.hr {
 }
 
 #timeBG {
-  x: 114;
-  y: 126;
-  height: 70;
-  width: 216;
+  y: 124;
+  height: 72;
   fill: black;
 }
 
 #time {
   font-weight: light;
   font-size: 92;
-  x:100%-4;
-  y:192;
+  x: 100%-4;
+  y: 191;
+  height: 71;
   text-anchor: end;
 }
 
