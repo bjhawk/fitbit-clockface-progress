@@ -1,5 +1,6 @@
 const flags = [
   { 'name': 'Progress Pride', 'value': 'ProgressPride', 'defaultIcon': '' },
+  { 'name': 'Philadelphia Pride', 'value': 'PhiladelphiaPride', 'defaultIcon': '' },
   { 'name': 'Gilbert Baker Pride', 'value': 'GilbertBakerPride', 'defaultIcon': '' },
   { 'name': 'Pride 1978', 'value': 'Pride1978', 'defaultIcon': '' },
   { 'name': 'Pride', 'value': 'Pride', 'defaultIcon': '' },
@@ -18,7 +19,6 @@ const flags = [
   { 'name': 'Lipstick Lesbian', 'value': 'LipstickLesbian', 'defaultIcon': 'Kiss' },
   { 'name': 'Non-binary', 'value': 'Non-binary', 'defaultIcon': '' },
   { 'name': 'Pansexual', 'value': 'Pansexual', 'defaultIcon': '' },
-  { 'name': 'Philadelphia Pride', 'value': 'PhiladelphiaPride', 'defaultIcon': '' },
   { 'name': 'Polyamory', 'value': 'Polyamory', 'defaultIcon': 'Pi' },
   { 'name': 'Polysexual', 'value': 'Polysexual', 'defaultIcon': '' },
   { 'name': 'Transgender', 'value': 'Transgender', 'defaultIcon': '' },

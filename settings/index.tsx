@@ -1,3 +1,4 @@
+import { gettext } from "i18n";
 import flags from '../common/flags';
 import icons from '../common/icons';
 import colors from '../common/colors';
@@ -16,12 +17,12 @@ registerSettingsPage(({ settings, settingsStorage }) => (
     <Section
       title={
         <Text bold align='center'>
-          App Settings
+          { gettext('settings_title') }
         </Text>
       }
     >
       <Select
-        label='Choose a Flag'
+        label={gettext('settings_flag')}
         settingsKey='flag'
         options={flags}
         onSelection={(newFlag) => {
@@ -31,19 +32,19 @@ registerSettingsPage(({ settings, settingsStorage }) => (
       />
 
       <Select
-        label='Choose an optional Icon'
+        label={gettext('settings_icon')}
         settingsKey='icon'
         options={icons}
       />
 
       <Slider
-        label={`Time BG Transparency - ${settings.timeBGTransparency}%`}
+        label={gettext('settings_timeBGTransparency') + `: ${settings.timeBGTransparency}%`}
         settingsKey='timeBGTransparency'
         min='0'
         max='100'
       />
 
-      <Text>Time Font Color</Text>
+      <Text>{gettext('settings_time_color')}</Text>
       <ColorSelect
         settingsKey='timeColor'
         colors={colors}

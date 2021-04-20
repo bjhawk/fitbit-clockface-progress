@@ -36,6 +36,17 @@ const svg = document.getElementById('container');
 // Handle settings
 // get an instance of Settings
 const settings = new Settings();
+
+// Helper function, debounced apply background opacity to time BG
+let setBackgroundTransparencyTimeout = null;
+function setBackgroundTransparency(newOpacity) {
+  clearTimeout(setBackgroundTransparencyTimeout);
+  setBackgroundTransparencyTimeout = setTimeout(() => {
+    // @ts-ignore: element.style is valid for html and svg elements
+    clockBGElement.style.opacity = newOpacity;
+  }, 500);
+}
+
 appSettings.initialize(
   settings,
   (newSettings: Settings) => {
@@ -53,16 +64,10 @@ appSettings.initialize(
         iconElement.href = `icons/${newSettings.icon.values[0].value}.png`;
       }
     }
-
-    if (newSettings.timeBGTransparency !== undefined) {
-      // @ts-ignore: element.style is valid for html and svg elements
-      clockBGElement.style.opacity = newSettings.timeBGTransparency / 100
-    }
-
     
     if (newSettings.timeBGTransparency !== undefined) {
       // @ts-ignore: element.style is valid for html and svg elements
-      clockBGElement.style.opacity = newSettings.timeBGTransparency / 100;
+      setBackgroundTransparency(newSettings.timeBGTransparency / 100);
     }
 
     if (newSettings.timeColor !== undefined) {
@@ -103,10 +108,8 @@ clock.ontick = function(clockTickEvent) {
 };
 
 let statTimeout = setInterval(draw, 3000);
-// TODO: this is throwing an error 61:7 - cannot read property activated of null - perms?
 display.addEventListener('change', () => {
   if (display.on) {
-    // on display change = on: draw stats, set timeout for stats draw every few seconds (6?)
     toggleSensors(true);
     statTimeout = setInterval(draw, 3000);
   } else {

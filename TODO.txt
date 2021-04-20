@@ -1,7 +1,3 @@
-debounce transparency slider :(
-
 make note somewhere about how to generate flags? `node .\resources\FlagDefinitionsToSVGToPng.js` 
 
 attributions
-
-`App: Error 2 Invalid path '/mnt/sysassets/widgets/images/fb_logo/logo_dot_a8.png'`

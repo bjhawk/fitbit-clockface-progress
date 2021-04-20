@@ -1,0 +1,14 @@
+msgid "settings_title"
+msgstr "Settings"
+
+msgid "settings_flag"
+msgstr "Choose a Flag"
+
+msgid "settings_icon"
+msgstr "Choose an optional Icon"
+
+msgid "settings_timeBGTransparency"
+msgstr "Time Background Transparency"
+
+msgid "settings_time_color"
+msgstr "Time Font Color"
