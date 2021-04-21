@@ -77,21 +77,11 @@ line.hr {
   y: 1;
 }
 
-#batteryGroup {
-  fill: #00FF00;
-}
-
-#batteryGroup.mid {
-  fill: gold;
-}
-
-#batteryGroup.low {
-  fill: darkorange;
-}
-
-#batteryGroup.critical {
-  fill: red;
-}
+#batteryGroup { fill: #00FF00; }
+#batteryGroup.high { fill: greenyellow; }
+#batteryGroup.mid { fill: yellow; }
+#batteryGroup.low { fill: darkorange; }
+#batteryGroup.critical { fill: red; }
 
 #batteryIcon {
   x: 0;

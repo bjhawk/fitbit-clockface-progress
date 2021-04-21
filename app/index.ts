@@ -136,13 +136,6 @@ function toggleSensors(toggleOn: boolean = true) {
   }
 }
 
-const batteryClasses = [
-  '', // 85+
-  'mid', // 50-85,
-  'low', // 25-50,
-  'critical', // 0-25
-];
-
 // Battery display
 function drawBattery() {
   batteryElement.text = `${battery.chargeLevel.toFixed(0)}`;
@@ -156,11 +149,13 @@ function drawBattery() {
   }
 
   // Changes color based on chargeLevel
-  if (battery.chargeLevel >= 50 && battery.chargeLevel < 85) {
+  if (battery.chargeLevel >= 60 && battery.chargeLevel < 80) {
+    batteryClasses.push('high');
+  } else if (battery.chargeLevel >= 40 && battery.chargeLevel < 60) {
     batteryClasses.push('mid');
-  } else if (battery.chargeLevel >= 25 && battery.chargeLevel < 50) {
+  } else if (battery.chargeLevel >= 20 && battery.chargeLevel < 40) {
     batteryClasses.push('low');
-  } else if (battery.chargeLevel < 25) {
+  } else if (battery.chargeLevel < 20) {
     batteryClasses.push('critical');
   }
   batteryGroup.class = batteryClasses.join(' ');
