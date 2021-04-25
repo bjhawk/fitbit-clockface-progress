@@ -39,43 +39,43 @@ The Progress Pride and Intersex flags have had some _artistic license_ taken wit
 The icons have been taken directly from the flags' reference images, and are included separately so you can pick and choose to customize your watchface.
 
 ### Flags
-| Name | Image |
-| :--- | ---: |
-| Progress Pride | <img src="resources/flags/ProgressPride.png" width="65px" alt="Progress Pride" /> |
-| Philadelphia Pride | <img src="resources/flags/PhiladelphiaPride.png" width="65px" alt="Philadelphia Pride" /> |
-| Gilbertbaker Pride | <img src="resources/flags/GilbertBakerPride.png" width="65px" alt="Gilbertbaker Pride" /> |
-| Pride 1978 | <img src="resources/flags/Pride1978.png" width="65px" alt="Pride 1978" /> |
-| Pride | <img src="resources/flags/Pride.png" width="65px" alt="Pride" /> |
-| Agender | <img src="resources/flags/Agender.png" width="65px" alt="Agender" /> |
-| Ally | <img src="resources/flags/Ally.png" width="65px" alt="Ally" /> |
-| Aromantic | <img src="resources/flags/Aromantic.png" width="65px" alt="Aromantic" /> |
-| Asexual | <img src="resources/flags/Asexual.png" width="65px" alt="Asexual" /> |
-| Bear Pride | <img src="resources/flags/BearPride.png" width="65px" alt="Bear Pride" /> |
-| Bisexual | <img src="resources/flags/Bisexual.png" width="65px" alt="Bisexual" /> |
-| Genderfluid | <img src="resources/flags/Genderfluid.png" width="65px" alt="Genderfluid" /> |
-| Genderqueer | <img src="resources/flags/Genderqueer.png" width="65px" alt="Genderqueer" /> |
-| Intersex | <img src="resources/flags/Intersex.png" width="65px" alt="Intersex" /> |
-| Leather Pride | <img src="resources/flags/LeatherPride.png" width="65px" alt="Leather Pride" /> |
-| Lesbian Labrys | <img src="resources/flags/LesbianLabrys.png" width="65px" alt="Lesbian Labrys" /> |
-| Lesbian | <img src="resources/flags/Lesbian.png" width="65px" alt="Lesbian" /> |
-| Lipstick Lesbian | <img src="resources/flags/LipstickLesbian.png" width="65px" alt="Lipstick Lesbian" /> |
-| Non-binary | <img src="resources/flags/Non-binary.png" width="65px" alt="Non-binary" /> |
-| Pansexual | <img src="resources/flags/Pansexual.png" width="65px" alt="Pansexual" /> |
-| Polyamory | <img src="resources/flags/Polyamory.png" width="65px" alt="Polyamory" /> |
-| Polysexual | <img src="resources/flags/Polysexual.png" width="65px" alt="Polysexual" /> |
-| Transgender | <img src="resources/flags/Transgender.png" width="65px" alt="Transgender" /> |
+| Name | Image | Default Icon |
+| --- | --- | --- |
+| Progress Pride | <img src="resources/flags/ProgressPride.png" width="65px" alt="Progress Pride" /> | none |
+| Philadelphia Pride | <img src="resources/flags/PhiladelphiaPride.png" width="65px" alt="Philadelphia Pride" /> | none |
+| Gilbertbaker Pride | <img src="resources/flags/GilbertBakerPride.png" width="65px" alt="Gilbertbaker Pride" /> | none |
+| Pride 1978 | <img src="resources/flags/Pride1978.png" width="65px" alt="Pride 1978" /> | none |
+| Pride | <img src="resources/flags/Pride.png" width="65px" alt="Pride" /> | none |
+| Agender | <img src="resources/flags/Agender.png" width="65px" alt="Agender" /> | none |
+| Ally | <img src="resources/flags/Ally.png" width="65px" alt="Ally" /> | <img src="resources/icons/Ally.png" width="65px" alt="Ally Chevron" /> |
+| Aromantic | <img src="resources/flags/Aromantic.png" width="65px" alt="Aromantic" /> | none |
+| Asexual | <img src="resources/flags/Asexual.png" width="65px" alt="Asexual" /> | none |
+| Bear Pride | <img src="resources/flags/BearPride.png" width="65px" alt="Bear Pride" /> | <img src="resources/icons/Paw.png" width="65px" alt="Bear Paw" /> |
+| Bisexual | <img src="resources/flags/Bisexual.png" width="65px" alt="Bisexual" /> | none |
+| Genderfluid | <img src="resources/flags/Genderfluid.png" width="65px" alt="Genderfluid" /> | none |
+| Genderqueer | <img src="resources/flags/Genderqueer.png" width="65px" alt="Genderqueer" /> | none |
+| Intersex | <img src="resources/flags/Intersex.png" width="65px" alt="Intersex" /> | none |
+| Leather Pride | <img src="resources/flags/LeatherPride.png" width="65px" alt="Leather Pride" /> | <img src="resources/icons/Heart.png" width="65px" alt="Leather Flag Heart" /> |
+| Lesbian Labrys | <img src="resources/flags/LesbianLabrys.png" width="65px" alt="Lesbian Labrys" /> | <img src="resources/icons/Labrys.png" width="65px" alt="Lesbian Labrys" /> |
+| Lesbian | <img src="resources/flags/Lesbian.png" width="65px" alt="Lesbian" /> | none |
+| Lipstick Lesbian | <img src="resources/flags/LipstickLesbian.png" width="65px" alt="Lipstick Lesbian" /> | <img src="resources/icons/Kiss.png" width="65px" alt="Lipstick Lesbian Kiss" /> |
+| Non-binary | <img src="resources/flags/Non-binary.png" width="65px" alt="Non-binary" /> | none |
+| Pansexual | <img src="resources/flags/Pansexual.png" width="65px" alt="Pansexual" /> | none |
+| Polyamory | <img src="resources/flags/Polyamory.png" width="65px" alt="Polyamory" /> | <img src="resources/icons/Pi.png" width="65px" alt="Polyamory Pi" /> |
+| Polysexual | <img src="resources/flags/Polysexual.png" width="65px" alt="Polysexual" /> | none |
+| Transgender | <img src="resources/flags/Transgender.png" width="65px" alt="Transgender" /> | none |
 
 ### Icons
 | Name | Image |
 | :--- | ---: |
-| Black Lives Matter Fist | <img src="resources/icons/BLM.png" width="65px" alt="Black Lives Matter Fist" />|
-| Ally Chevron | <img src="resources/icons/Ally.png" width="65px" alt="Ally Chevron" />|
-| Leather Flag Heart | <img src="resources/icons/Heart.png" width="65px" alt="Leather Flag Heart" />|
-| Lipstick Lesbian Kiss | <img src="resources/icons/Kiss.png" width="65px" alt="Lipstick Lesbian Kiss" />|
-| Lesbian Labrys | <img src="resources/icons/Labrys.png" width="65px" alt="Lesbian Labrys" />|
-| Bear Paw | <img src="resources/icons/Paw.png" width="65px" alt="Bear Paw" />|
-| Polyamory Pi | <img src="resources/icons/Pi.png" width="65px" alt="Polyamory Pi" />|
-| Polyamory Infinity Heart | <img src="resources/icons/InfinityHeart.png" width="65px" alt="Polyamory Infinity Heart" />|
+| Black Lives Matter Fist | <img src="resources/icons/BLM.png" width="65px" alt="Black Lives Matter Fist" /> |
+| Ally Chevron | <img src="resources/icons/Ally.png" width="65px" alt="Ally Chevron" /> |
+| Leather Flag Heart | <img src="resources/icons/Heart.png" width="65px" alt="Leather Flag Heart" /> |
+| Lipstick Lesbian Kiss | <img src="resources/icons/Kiss.png" width="65px" alt="Lipstick Lesbian Kiss" /> |
+| Lesbian Labrys | <img src="resources/icons/Labrys.png" width="65px" alt="Lesbian Labrys" /> |
+| Bear Paw | <img src="resources/icons/Paw.png" width="65px" alt="Bear Paw" /> |
+| Polyamory Pi | <img src="resources/icons/Pi.png" width="65px" alt="Polyamory Pi" /> |
+| Polyamory Infinity Heart | <img src="resources/icons/InfinityHeart.png" width="65px" alt="Polyamory Infinity Heart" /> |
 
 
 
