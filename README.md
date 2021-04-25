@@ -41,39 +41,39 @@ The icons have been taken directly from the flags' reference images, and are inc
 The white borders below are just to make them more visible in a web browser, and aren't present in the watchface.
 
 ### Flags
-<img src="resources/flags/ProgressPride.png" style="max-width:65px;border:1px solid white;" alt="Progresspride" />
-<img src="resources/flags/PhiladelphiaPride.png" style="max-width:65px;border:1px solid white;" alt="Philadelphiapride" />
-<img src="resources/flags/GilbertBakerPride.png" style="max-width:65px;border:1px solid white;" alt="Gilbertbakerpride" />
-<img src="resources/flags/Pride1978.png" style="max-width:65px;border:1px solid white;" alt="Pride1978" />
-<img src="resources/flags/Pride.png" style="max-width:65px;border:1px solid white;" alt="Pride" />
-<img src="resources/flags/Agender.png" style="max-width:65px;border:1px solid white;" alt="Agender" />
-<img src="resources/flags/Ally.png" style="max-width:65px;border:1px solid white;" alt="Ally" />
-<img src="resources/flags/Aromantic.png" style="max-width:65px;border:1px solid white;" alt="Aromantic" />
-<img src="resources/flags/Asexual.png" style="max-width:65px;border:1px solid white;" alt="Asexual" />
-<img src="resources/flags/BearPride.png" style="max-width:65px;border:1px solid white;" alt="Bearpride" />
-<img src="resources/flags/Bisexual.png" style="max-width:65px;border:1px solid white;" alt="Bisexual" />
-<img src="resources/flags/Genderfluid.png" style="max-width:65px;border:1px solid white;" alt="Genderfluid" />
-<img src="resources/flags/Genderqueer.png" style="max-width:65px;border:1px solid white;" alt="Genderqueer" />
-<img src="resources/flags/Intersex.png" style="max-width:65px;border:1px solid white;" alt="Intersex" />
-<img src="resources/flags/LeatherPride.png" style="max-width:65px;border:1px solid white;" alt="Leatherpride" />
-<img src="resources/flags/LesbianLabrys.png" style="max-width:65px;border:1px solid white;" alt="Lesbianlabrys" />
-<img src="resources/flags/Lesbian.png" style="max-width:65px;border:1px solid white;" alt="Lesbian" />
-<img src="resources/flags/LipstickLesbian.png" style="max-width:65px;border:1px solid white;" alt="Lipsticklesbian" />
-<img src="resources/flags/Non-binary.png" style="max-width:65px;border:1px solid white;" alt="Non-binary" />
-<img src="resources/flags/Pansexual.png" style="max-width:65px;border:1px solid white;" alt="Pansexual" />
-<img src="resources/flags/Polyamory.png" style="max-width:65px;border:1px solid white;" alt="Polyamory" />
-<img src="resources/flags/Polysexual.png" style="max-width:65px;border:1px solid white;" alt="Polysexual" />
-<img src="resources/flags/Transgender.png" style="max-width:65px;border:1px solid white;" alt="Transgender" />
+<img src="resources/flags/ProgressPride.png" width="65px" alt="Progresspride" />
+<img src="resources/flags/PhiladelphiaPride.png" width="65px" alt="Philadelphiapride" />
+<img src="resources/flags/GilbertBakerPride.png" width="65px" alt="Gilbertbakerpride" />
+<img src="resources/flags/Pride1978.png" width="65px" alt="Pride1978" />
+<img src="resources/flags/Pride.png" width="65px" alt="Pride" />
+<img src="resources/flags/Agender.png" width="65px" alt="Agender" />
+<img src="resources/flags/Ally.png" width="65px" alt="Ally" />
+<img src="resources/flags/Aromantic.png" width="65px" alt="Aromantic" />
+<img src="resources/flags/Asexual.png" width="65px" alt="Asexual" />
+<img src="resources/flags/BearPride.png" width="65px" alt="Bearpride" />
+<img src="resources/flags/Bisexual.png" width="65px" alt="Bisexual" />
+<img src="resources/flags/Genderfluid.png" width="65px" alt="Genderfluid" />
+<img src="resources/flags/Genderqueer.png" width="65px" alt="Genderqueer" />
+<img src="resources/flags/Intersex.png" width="65px" alt="Intersex" />
+<img src="resources/flags/LeatherPride.png" width="65px" alt="Leatherpride" />
+<img src="resources/flags/LesbianLabrys.png" width="65px" alt="Lesbianlabrys" />
+<img src="resources/flags/Lesbian.png" width="65px" alt="Lesbian" />
+<img src="resources/flags/LipstickLesbian.png" width="65px" alt="Lipsticklesbian" />
+<img src="resources/flags/Non-binary.png" width="65px" alt="Non-binary" />
+<img src="resources/flags/Pansexual.png" width="65px" alt="Pansexual" />
+<img src="resources/flags/Polyamory.png" width="65px" alt="Polyamory" />
+<img src="resources/flags/Polysexual.png" width="65px" alt="Polysexual" />
+<img src="resources/flags/Transgender.png" width="65px" alt="Transgender" />
 
 ### Icons
-<img src="resources/icons/BLM.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Black Lives Matter Fist" />
-<img src="resources/icons/Ally.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Ally Chevron" />
-<img src="resources/icons/Heart.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Leather Flag Heart" />
-<img src="resources/icons/Kiss.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Lipstick Lesbian Kiss" />
-<img src="resources/icons/Labrys.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Lesbian Labrys" />
-<img src="resources/icons/Paw.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Bear Paw" />
-<img src="resources/icons/Pi.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Polyamory Pi" />
-<img src="resources/icons/InfinityHeart.png" style="width:65px;border:1px solid white;background-color:#494949" alt="Polyamory Infinity Heart" />
+<img src="resources/icons/BLM.png" width="65px" alt="Black Lives Matter Fist" />
+<img src="resources/icons/Ally.png" width="65px" alt="Ally Chevron" />
+<img src="resources/icons/Heart.png" width="65px" alt="Leather Flag Heart" />
+<img src="resources/icons/Kiss.png" width="65px" alt="Lipstick Lesbian Kiss" />
+<img src="resources/icons/Labrys.png" width="65px" alt="Lesbian Labrys" />
+<img src="resources/icons/Paw.png" width="65px" alt="Bear Paw" />
+<img src="resources/icons/Pi.png" width="65px" alt="Polyamory Pi" />
+<img src="resources/icons/InfinityHeart.png" width="65px" alt="Polyamory Infinity Heart" />
 
 ---
 ## Flag Requests and Issues
