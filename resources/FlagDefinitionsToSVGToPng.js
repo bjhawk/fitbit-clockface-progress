@@ -129,6 +129,18 @@ const flagDefinitions = [
     ]
   },
   {
+    "name": "Gay Men's Pride",
+    "colors": [
+      "darkcyan",
+      "mediumaquamarine",
+      "seafoam",
+      "white",
+      "lightskyblue",
+      "royalblue",
+      "midnightslate",
+    ]
+  },
+  {
     "name": "Lesbian",
     "colors": [
       "orangered",
@@ -265,6 +277,8 @@ const customColors = {
   'lavender': '#A74AC7',
   'lightlavender': '#CD66FF',
   'black': '#1C1C1C',
+  'seafoam': '#99E8C2',
+  'midnightslate': '#382070',
 };
 
 const flagHeight = 201;
@@ -275,7 +289,7 @@ flagDefinitions.forEach((definition) => {
 });
 
 function drawFlag(flagDefinition) {
-  const flagName = flagDefinition.name.replace(/ /g, '');
+  const flagName = flagDefinition.name.replace(/[ |']/g, '');
   console.log('Making flag: ' + flagName);
   const newFlag = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   newFlag.setAttribute('height', `${flagHeight}px`);

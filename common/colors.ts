@@ -31,6 +31,7 @@ const colors = [
   {name: 'Medium Orchid', color: 'mediumorchid', value: 'mediumorchid'},
   {name: 'Medium Turquoise', color: 'mediumturquoise', value: 'mediumturquoise'},
   {name: 'Medium Violet Red', color: 'mediumvioletred', value: 'mediumvioletred'},
+  {name: 'Midnight Slate', color: '#382070', value: 'midnightslate'},
   {name: 'Orange', color: 'orange', value: 'orange'},
   {name: 'Orange Red', color: 'orangered', value: 'orangered'},
   {name: 'Orchid', color: 'orchid', value: 'orchid'},
@@ -38,6 +39,7 @@ const colors = [
   {name: 'Purple', color: 'purple', value: 'purple'},
   {name: 'Red', color: 'red', value: 'red'},
   {name: 'Saddle Brown', color: 'saddlebrown', value: 'saddlebrown'},
+  {name: 'Seafoam', color: '#99E8C2', value: 'seafoam'},
   {name: 'Violet', color: 'violet', value: 'violet'},
   {name: 'Yellow', color: 'yellow', value: 'yellow'},
 ];
