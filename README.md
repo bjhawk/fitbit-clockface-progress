@@ -43,7 +43,8 @@ The icons have been taken directly from the flags' reference images, and are inc
 | --- | --- | --- |
 | Progress Pride | <img src="resources/flags/ProgressPride.png" width="65px" alt="Progress Pride" /> | none |
 | Philadelphia Pride | <img src="resources/flags/PhiladelphiaPride.png" width="65px" alt="Philadelphia Pride" /> | none |
-| Gilbertbaker Pride | <img src="resources/flags/GilbertBakerPride.png" width="65px" alt="Gilbertbaker Pride" /> | none |
+| Gilbert Baker Pride | <img src="resources/flags/GilbertBakerPride.png" width="65px" alt="Gilbert Baker Pride" /> | none |
+| Gilbert Baker Diversity Pride | <img src="resources/flags/GilbertBakerDiversityPride.png" width="65px" alt="Gilbert Baker Diversit Pride" /> | none |
 | Pride 1978 | <img src="resources/flags/Pride1978.png" width="65px" alt="Pride 1978" /> | none |
 | Pride | <img src="resources/flags/Pride.png" width="65px" alt="Pride" /> | none |
 | Agender | <img src="resources/flags/Agender.png" width="65px" alt="Agender" /> | none |
