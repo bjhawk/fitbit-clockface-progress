@@ -53,7 +53,7 @@ The icons have been taken directly from the flags' reference images, and are inc
 | Asexual | <img src="resources/flags/Asexual.png" width="65px" alt="Asexual" /> | none |
 | Bear Pride | <img src="resources/flags/BearPride.png" width="65px" alt="Bear Pride" /> | <img src="resources/icons/Paw.png" width="65px" alt="Bear Paw" /> |
 | Bisexual | <img src="resources/flags/Bisexual.png" width="65px" alt="Bisexual" /> | none |
-| Gay Men's Pride | <img src="resources/flags/GayMensPride.png" width="65px" alt="Gay Men's Pride" /> | none |
+| Gay Mens' Pride | <img src="resources/flags/GayMensPride.png" width="65px" alt="Gay Mens' Pride" /> | none |
 | Genderfluid | <img src="resources/flags/Genderfluid.png" width="65px" alt="Genderfluid" /> | none |
 | Genderqueer | <img src="resources/flags/Genderqueer.png" width="65px" alt="Genderqueer" /> | none |
 | Intersex | <img src="resources/flags/Intersex.png" width="65px" alt="Intersex" /> | none |

@@ -11,7 +11,7 @@ const flags = [
   { 'name': 'Asexual', 'value': 'Asexual', 'defaultIcon': '' },
   { 'name': 'Bear Pride', 'value': 'BearPride', 'defaultIcon': 'Paw' },
   { 'name': 'Bisexual', 'value': 'Bisexual', 'defaultIcon': '' },
-  { 'name': 'Gay Men\'s Pride', 'value': 'GayMensPride', 'defaultIcon': '' },
+  { 'name': 'Gay Mens\' Pride', 'value': 'GayMensPride', 'defaultIcon': '' },
   { 'name': 'Genderfluid', 'value': 'Genderfluid', 'defaultIcon': '' },
   { 'name': 'Genderqueer', 'value': 'Genderqueer', 'defaultIcon': '' },
   { 'name': 'Intersex', 'value': 'Intersex', 'defaultIcon': '' },

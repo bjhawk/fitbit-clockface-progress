@@ -129,7 +129,7 @@ const flagDefinitions = [
     ]
   },
   {
-    "name": "Gay Men's Pride",
+    "name": "Gay Mens' Pride",
     "colors": [
       "darkcyan",
       "mediumaquamarine",
