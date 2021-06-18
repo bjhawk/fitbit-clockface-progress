@@ -20,6 +20,7 @@ const colors = [
   {name: 'Indian Red', color: 'indianred', value: 'indianred'},
   {name: 'Indigo', color: 'indigo', value: 'indigo'},
   {name: 'Lavender', color: '#A74AC7', value: 'lavender'},
+  {name: 'Light Lavender', color: '#CD66FF', value: 'lightlavender'},
   {name: 'Light Gray', color: 'lightgray', value: 'lightgray'},
   {name: 'Light Pink', color: 'lightpink', value: 'lightpink'},
   {name: 'Light Sky Blue', color: 'lightskyblue', value: 'lightskyblue'},

@@ -2,6 +2,7 @@ const flags = [
   { 'name': 'Progress Pride', 'value': 'ProgressPride', 'defaultIcon': '' },
   { 'name': 'Philadelphia Pride', 'value': 'PhiladelphiaPride', 'defaultIcon': '' },
   { 'name': 'Gilbert Baker Pride', 'value': 'GilbertBakerPride', 'defaultIcon': '' },
+  { 'name': 'Gilbert Baker Diversity Pride', 'value': 'GilbertBakerDiversityPride', 'defaultIcon': '' },
   { 'name': 'Pride 1978', 'value': 'Pride1978', 'defaultIcon': '' },
   { 'name': 'Pride', 'value': 'Pride', 'defaultIcon': '' },
   { 'name': 'Agender', 'value': 'Agender', 'defaultIcon': '' },

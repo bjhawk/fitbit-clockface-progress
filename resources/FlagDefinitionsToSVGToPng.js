@@ -21,6 +21,20 @@ const flagDefinitions = [
     ]
   },
   {
+    "name": "Gilbert Baker Diversity Pride",
+    "colors": [
+      "lightlavender",
+      "hotpink",
+      "red",
+      "orange",
+      "yellow",
+      "limegreen",
+      "mediumturquoise",
+      "indigo",
+      "darkmagenta"
+    ]
+  },
+  {
     "name": "Pride 1978",
     "colors": [
       "red",
@@ -246,10 +260,10 @@ const flagDefinitions = [
   }
 ];
 
-
 const customColors = {
   'carnation': '#F778A1',
   'lavender': '#A74AC7',
+  'lightlavender': '#CD66FF',
   'black': '#1C1C1C',
 };
 
