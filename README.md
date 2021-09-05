@@ -65,6 +65,7 @@ The icons have been taken directly from the flags' reference images, and are inc
 | Pansexual | <img src="resources/flags/Pansexual.png" width="65px" alt="Pansexual" /> | none |
 | Polyamory | <img src="resources/flags/Polyamory.png" width="65px" alt="Polyamory" /> | <img src="resources/icons/Pi.png" width="65px" alt="Polyamory Pi" /> |
 | Polysexual | <img src="resources/flags/Polysexual.png" width="65px" alt="Polysexual" /> | none |
+| Pup Pride | <img src="resources/flags/PupPride.png" width="65px" alt="Pup Pride" /> | <img src="resources/icons/PupBone.png" width="65px" alt="Pup Bone" /> |
 | Transgender | <img src="resources/flags/Transgender.png" width="65px" alt="Transgender" /> | none |
 
 ### Icons
@@ -78,6 +79,7 @@ The icons have been taken directly from the flags' reference images, and are inc
 | Bear Paw | <img src="resources/icons/Paw.png" width="65px" alt="Bear Paw" /> |
 | Polyamory Pi | <img src="resources/icons/Pi.png" width="65px" alt="Polyamory Pi" /> |
 | Polyamory Infinity Heart | <img src="resources/icons/InfinityHeart.png" width="65px" alt="Polyamory Infinity Heart" /> |
+| Pup Bone | <img src="resources/icons/PupBone.png" width="65px" alt="Pup Bone" /> |
 
 
 

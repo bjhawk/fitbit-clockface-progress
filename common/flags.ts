@@ -23,6 +23,7 @@ const flags = [
   { 'name': 'Pansexual', 'value': 'Pansexual', 'defaultIcon': '' },
   { 'name': 'Polyamory', 'value': 'Polyamory', 'defaultIcon': 'Pi' },
   { 'name': 'Polysexual', 'value': 'Polysexual', 'defaultIcon': '' },
+  { 'name': 'Pup Pride', 'value': 'PupPride', 'defaultIcon': 'PupBone' },
   { 'name': 'Transgender', 'value': 'Transgender', 'defaultIcon': '' },
 ];
 

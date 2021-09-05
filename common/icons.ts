@@ -8,6 +8,7 @@ const icons = [
   { name: 'Bear Paw', value: 'Paw' },
   { name: 'Polyamory Pi', value: 'Pi' },
   { name: 'Polyamory Infintiy Heart', value: 'InfinityHeart' },
+  { name: 'Pup Bone', value: 'PupBone' },
 ];
 
 export default icons;

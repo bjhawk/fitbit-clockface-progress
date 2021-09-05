@@ -126,7 +126,22 @@ const flagDefinitions = [
       "gold",
       "gold",
       "gold"
-    ]
+    ],
+    finalize(newFlag) {
+      console.log('Adding circle to intersex flag');
+      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      circle.setAttribute('cx', 51);
+      circle.setAttribute('cy', 100);
+      circle.setAttribute('r', 40);
+      circle.setAttribute('fill', 'purple');
+
+      const innerCircle = circle.cloneNode('true');
+      innerCircle.setAttribute('fill', 'gold');
+      innerCircle.setAttribute('r', '28');
+
+      newFlag.appendChild(circle);
+      newFlag.appendChild(innerCircle);
+    }
   },
   {
     "name": "Gay Mens' Pride",
@@ -269,6 +284,53 @@ const flagDefinitions = [
       "black",
       "white",
     ]
+  },
+  {
+    "name": "Pup Pride",
+    "colors": [
+      "black",
+    ],
+    finalize(newFlag) {
+      console.log('Drawing Pup Pride triangles');
+      const minx = 0;
+      const miny = 0;
+      const maxx = 336;
+      const maxy = 201;
+
+      const triangleColors = ["white", "blue", "black", "blue", "black"];
+      for (index = 0; index < triangleColors.length; index += 1) {
+        const whiteOffset = triangleColors[index] === 'white' ? 1 : 0;
+
+        const topRightPoints = [
+          [maxx, miny],
+          [minx + ((index / 5) * maxx) - whiteOffset, miny],
+          [maxx, maxy - ((index / 5) * maxy) + whiteOffset]
+        ];
+        const topRightPointsString = topRightPoints.reduce((pointString, newPoint) => {
+          return `${pointString} ${newPoint[0]},${newPoint[1]}`;
+        }, '').trim();
+        const topRight = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        topRight.setAttribute('fill', triangleColors[index]);
+        topRight.setAttribute('points', topRightPointsString);
+        newFlag.appendChild(topRight);
+
+        const bottomLeftPoints = [
+          [minx, maxy],
+          [maxx - ((index / 5) * maxx), maxy],
+          [minx, miny + ((index / 5) * maxy)]
+        ];
+        const bottomLeftPointsString = bottomLeftPoints.reduce((pointString, newPoint) => {
+          return `${pointString} ${newPoint[0]},${newPoint[1]}`;
+        }, '').trim();
+        const bottomLeft = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        bottomLeft.setAttribute('fill', triangleColors[index]);
+        bottomLeft.setAttribute('points', bottomLeftPointsString);
+        newFlag.appendChild(bottomLeft);
+      }
+      
+
+      return;
+    }
   }
 ];
 
@@ -326,21 +388,9 @@ function drawFlag(flagDefinition) {
     newFlag.appendChild(rect);
   });
 
-  // todo: special case for intersex circle
-  if (flagName === 'Intersex') {
-    console.log('Adding circle to intersex flag');
-    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    circle.setAttribute('cx', 51);
-    circle.setAttribute('cy', 100);
-    circle.setAttribute('r', 40);
-    circle.setAttribute('fill', 'purple');
-
-    const innerCircle = circle.cloneNode('true');
-    innerCircle.setAttribute('fill', 'gold');
-    innerCircle.setAttribute('r', '28');
-
-    newFlag.appendChild(circle);
-    newFlag.appendChild(innerCircle);
+  // any special handling is in a `finalize()` function on the flag def
+  if (flagDefinition.hasOwnProperty('finalize')) {
+    flagDefinition.finalize(newFlag);
   }
 
   // console.log(newFlag.outerHTML);
